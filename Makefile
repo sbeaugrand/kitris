@@ -30,7 +30,9 @@ $(HOME)/.local/share/applications/kitris.desktop: install.sh
 	@./$< $@
 
 .PHONY: icon
-icon: data/icon.png
+icon: data data/icon.png
+data:
+	@mkdir $@
 data/icon.png: data/kitris.svg
 	@convert -resize 512x512 $< $@
 data/kitris.svg: icon.py
