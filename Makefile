@@ -19,7 +19,7 @@ all: $(PYBLUEZ) $(PYDBUS)
 	@./main.py
 
 $(PYBLUEZ):
-	@pip3 install pybluez
+	@pip3 install git+https://github.com/pybluez/pybluez.git#egg=pybluez
 
 $(PYDBUS):
 	@pip3 install pydbus
